@@ -149,7 +149,7 @@ talk_themes = {
     ],
 }
 
-st.title("🎲 トークテーマアプリ")
+st.title("トークテーマアプリ")
 
 # --- アプリの状態管理 ---
 if "step" not in st.session_state:

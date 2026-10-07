@@ -203,7 +203,7 @@ theme_area = st.empty()
 
 # --- 1. ジャンルのドラムロール演出 ---
 if st.session_state.step == "genre_roll":
-    status_text.markdown("# 【Step 1】ジャンルを決めよう！")
+    status_text.markdown("【Step 1】ジャンルを決めよう！")
     for _ in range(8):
         tmp_g = random.choice(all_genres)
         genre_area.info(f"🏷️ ジャンル： **{tmp_g}**")
@@ -212,7 +212,7 @@ if st.session_state.step == "genre_roll":
 
 # --- 2. お題のドラムロール演出 ---
 if st.session_state.step == "theme_roll":
-    status_text.markdown(f"# ✨ ジャンル：【{st.session_state.chosen_genre}】\n# 【Step 2】テーマを決めよう")
+    status_text.markdown(f" ✨ ジャンル：【{st.session_state.chosen_genre}】\n 【Step 2】テーマを決めよう")
     genre_area.success(f"🏷️ ジャンル： **【{st.session_state.chosen_genre}】**")
     
     current_genre_themes = talk_themes[st.session_state.chosen_genre]
@@ -225,6 +225,6 @@ if st.session_state.step == "theme_roll":
 # --- 3. 最終結果表示 ---
 if st.session_state.step == "all_done":
     status_text.subheader("🎉 今回のテーマ")
-    genre_area.success(f"# 🏷️ ジャンル：【{st.session_state.chosen_genre}】")
-    theme_area.warning(f"# 👉 『{st.session_state.chosen_theme}』")
+    genre_area.success(f"### 🏷️ ジャンル：【{st.session_state.chosen_genre}】")
+    theme_area.warning(f"### 👉 『{st.session_state.chosen_theme}』")
  
